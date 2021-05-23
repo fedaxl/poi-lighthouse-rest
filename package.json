@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "jsonwebtoken": "^8.5.1",
+    "axios": "^0.21.1",
     "prettier": "^2.2.1"
   },
   "prettier": {
