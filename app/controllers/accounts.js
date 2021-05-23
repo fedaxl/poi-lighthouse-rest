@@ -195,7 +195,7 @@ const Accounts = {
         const isadmin = Utils.isAdmin(scope);
 
         return h.view('settings', {
-          title: 'Donation Settings',
+          title: 'Account Settings',
           user: user,
           isadmin: isadmin
         });

@@ -1,0 +1,24 @@
+<div class="uk-margin uk-width-expand uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+    <table class="uk-table">
+        <caption>
+            User Reviews
+        </caption>
+        <thead>
+            <th>Review</th>
+            <th>Rating</th>
+            <th>Reviewer</th>
+            <th>Review Date</th>
+        </thead>
+        <tbody class="uk-text-left">
+        {{#each reviews}}
+            <tr>
+                <td>{{reviewDetail}}</td>
+                <td>{{rating}}</td>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{reviewDate}}</td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
