@@ -23,64 +23,64 @@
   ],
   "category": [
     {
-      "name": "WATERFORD GREENWAY"
+      "name": "North Coast"
     },
     {
-      "name": "GREAT WESTERN GREENWAY"
+      "name": "South Coast"
     },
     {
-      "name": "BOYNE GREENWAY"
+      "name": "East Coast"
     },
     {
-      "name": "COPPER COAST"
+      "name": "West Coast"
     }
   ],
   "image": [
     {
-      "public_id": "fixture_json_for_testing_1",
-      "url": "https://res.cloudinary.com/sarahbarron/image/upload/v1590353941/uga5m1tedgm34hofrujn.jpg"
+      "public_id": "hook1",
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook1.jpg"
     },
     {
-      "public_id":  "fixture_json_for_testing_1",
-      "url": "https://res.cloudinary.com/sarahbarron/image/upload/v1590353688/fixture_json_for_testing_2.jpg"
+      "public_id":  "hook2",
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook2.jpg"
     },
     {
-      "public_id": "fixture_json_for_testing_3",
-      "url": "https://res.cloudinary.com/sarahbarron/image/upload/v1590353663/fixture_json_for_testing_3.jpg"
+      "public_id": "hook3",
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook3.jpg"
     }
   ],
 
   "location": [
     {
-      "lat": 52.279270,
-      "lng": -7.150474
+      "lat": 52.1209,
+      "lng": -6.9241
     },
     {
-      "lat": 52.241090,
-      "lng": -7.219084
+      "lat": 52.1209,
+      "lng": -6.9241
     },
     {
-      "lat": 52.246973,
-      "lng": -7.246926
+      "lat": 52.1209,
+      "lng": -6.9241
     },
     {
-      "lng": -7.399,
-      "lat": 52.1079
+      "lat": 52.1209,
+      "lng": -6.9241
     }
   ],
   "poi": [
 
     {
-      "name": "Suir Bridge",
-      "description": "a lovely bridge"
+      "name": "Poolbeg lighthouse",
+      "description": "lighthouse in dublin"
     },
     {
-      "name": "Mount Congreve",
-      "description": "The route passes the bottom of the Mount Congreve"
+      "name": "Hook Lighthouse",
+      "description": "lighthouse in Wexford"
     },
     {
-      "name": "Suir Valley Railway",
-      "description": "This family friendly railway runs mostly along the picturesque banks of the River Suir"
+      "name": "Clare Lighthouse",
+      "description": "Lighthouse in Clare"
     }
    ],
 
@@ -94,8 +94,8 @@
 
 
   "newImage": {
-    "public_id": "fixtures_json_for_testing_newImage",
-    "url": "https://res.cloudinary.com/sarahbarron/image/upload/v1584704044/fixtures_json_for_testing_newImage.jpg"
+    "public_id": "lighthouses",
+    "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1614022942/guq22f2faxml1v89pipl.jpg"
   },
 
   "newLocation": {
