@@ -9,8 +9,8 @@ This application will allow a user to login/signup to an account, add and manage
 The admin user will be able to view all the other users accounts and manage all the POI inserted.
 <br />
 
-Glitch: https://handsome-quasar-touch.glitch.me/
-Heroku: https://poi-lighthouse.herokuapp.com/
+Glitch: https://maneskin-lighthouse.glitch.me/
+Heroku: https://poi-lighthouse-rest.herokuapp.com/
 
 ### v.1.1
 Authentation/Cookies/Session (@hapi/cookie)<br />
