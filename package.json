@@ -1,7 +1,7 @@
 {
   "name": "poi-web",
   "version": "1.0.0",
-  "description": "Source project for Enterprise Web Development course:",
+  "description": "Source project for Enterprise Web Development course",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
