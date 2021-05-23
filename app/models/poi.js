@@ -12,8 +12,10 @@ const PoiSchema = new Schema({
 
   name: String,
   description: String,
-  longitude: Number,
-  latitude: Number,
+  location: {
+    type: Schema.Types.ObjectId,
+    ref: 'Location'
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User'

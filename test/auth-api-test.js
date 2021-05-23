@@ -3,7 +3,7 @@
 const assert = require('chai').assert;
 const PoiService = require('./poi-service');
 const fixtures = require('./fixtures.json');
-const utils = require('./app/api/utils.js');
+const utils = require("../app/api/utils.js");
 
 /*
 Testing Suite for User Authentication
