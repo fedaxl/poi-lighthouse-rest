@@ -1,0 +1,60 @@
+<div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body">
+<form class="uk-form-stacked" action="/addpoi" method="POST" enctype="multipart/form-data">
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-stacked-text">POI title</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" id="form-stacked-text" name="name" type="text" placeholder="Add a Point of Interest">
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-stacked-select">Categories</label>
+    <div class="uk-form-controls">
+      <select name="category" class="uk-select" id="form-stacked-select">
+      {{#each categories}}
+        <option value="{{name}}">{{name}}</option>
+      {{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-stacked-text">Description</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" id="form-stacked-text" name="description" type="text" placeholder="POI Description">
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-stacked-text">Latitude</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" id="form-stacked-text" type="number" name="longitude" step="any"  placeholder="Latitude" required>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+      <label class="uk-form-label" for="form-stacked-text">Longitude</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" id="form-stacked-text" type="number" name="latitude" step="any"  placeholder="Longitude" required>
+      </div>
+  </div>
+
+  <div class="uk-margin">
+  <div class="uk-form-file">
+    <input type="file" name="image" accept="image/png, image/jpeg">
+  </div>
+  </div>
+
+  <button class="uk-button uk-button-default">UPLOAD POI</button>
+
+<!--   <div uk-form-custom="target: true">
+    <input type="file" name="image" accept="image/png, image/jpeg">
+    <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+  </div>
+  <button class="uk-button uk-button-default" value="Upload">Upload</button> -->
+
+</form>
+</div>
+
+{{> error }}

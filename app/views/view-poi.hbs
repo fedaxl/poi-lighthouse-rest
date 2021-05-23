@@ -1,0 +1,115 @@
+<!-- Page to view a single Point of interests full details-->
+<div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
+  {{> title-card title="Great Lighthouses of Ireland" subTitle="POI"}}
+  {{> main-menu}}
+</div>
+
+<div class="uk-container">
+  <div class="uk-margin"></div>
+  <h3>{{poi.name}}</h3>
+  <div class="uk-text-center uk-grid" uk-grid="">
+    <div class="uk-width-expand@m uk-animation-slide-left uk-first-column">
+      <div id="map-main" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="height: 560px; position: relative;">
+      <div id="map">
+      <script>
+        // initialize the map on the "map" div with a given center and zoom
+        var map = L.map('map').setView([53.2734, -7.77832031],8);
+
+        L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=uBDPLGN2cTddIZgIv4jN', {attributions: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}).addTo(map);
+        var marker = L.marker([{{poi.latitude}}, {{poi.longitude}}]).addTo(map);
+      </script>
+      </div>
+      </div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-text-center uk-text-small uk-grid" uk-grid="">
+          <div class="uk-width-expand@m uk-first-column">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+              <caption>GPS-compatible</caption>
+              <table class="uk-table uk-table-divider uk-table-small">
+                <tbody>
+                <tr>
+                  <td>Latitude</td> <td>{{poi.latitude}}</td>
+                </tr>
+                <tr><td>Longitude</td> <td>{{poi.longitude}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div> <div class="uk-width-1-2@m">
+          <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+            <caption>Category</caption>
+            <table class="uk-table uk-table-divider uk-table-small">
+              <tbody>
+              <tr>
+                <td>Location</td> <td>{{poi.category.name}}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+     <div class="uk-text-center uk-text-small uk-grid" uk-grid="">
+          <div class="uk-width-expand@m uk-first-column">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+              <caption>Local Weather</caption>
+              </div>
+              <table id="weather-table" class="uk-table uk-table-divider">
+              <thead>
+              <tr>
+                <th>Feels Like</th>
+                <th>Clouds</th>
+                <th>Wind Speed</th>
+                <th>Wind Direction</th>
+                <th>Visibility</th>
+                <th>Humidity</th>
+              </tr>
+              </thead>
+              <tbody>{{#each report}}
+              <tr>
+                  <td>{{feelsLike}}</td>
+                  <td>{{clouds}}</td>
+                  <td>{{windSpeed}}</td>
+                  <td>{{windDirection}}</td>
+                  <td>{{visibility}}</td>
+                  <td>{{humidity}}</td>
+              </tr>{{/each}}
+              </tbody>
+            </table>
+            </div>
+        </div></div>
+    </div>
+      <div class="uk-width-1-3@m uk-animation-slide-right">
+        <div class="ui segment">
+          <div class="description"><p>
+            <strong>{{poi.name}}: </strong>{{poi.description}}
+          </p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="uk-margin">
+    <a href="/delete-poi/{{poi._id}}" class="uk-icon-link" uk-icon="trash">Delete POI</a>
+    <a href="/update-poi/{{poi._id}}" class="uk-icon-link" uk-icon="pencil">Update POI</a>
+  </div>
+  <div class="uk-margin"></div>
+</div>
+
+<div class="uk-container uk-margin">
+  <!--    If there are no images don't show the images section-->
+  {{#if poi.image}}
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body"><h3>GALLERY</h3>
+          <div></div>
+          <div class="uk-grid-column-small uk-grid-row-small" uk-grid>
+            {{#each poi.image}}
+              {{> image-card}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  {{> add_images}}
+
+</div>

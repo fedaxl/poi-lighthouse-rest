@@ -1,0 +1,39 @@
+<!-- Partial showing the form for updating a single Point of Interest details-->
+<div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body">
+  <div class="uk-margin">
+        <h2>Update Point Of Interest</h2>
+    </div>
+            <form class="uk-form-stacked" action="/update-poi/{{poi._id}}" method="POST">
+                  <label class="uk-form-label" for="form-stacked-text">Name of POI</label>
+                    <input class="uk-input" type="text" name="name" value="{{poi.name}}" required>
+
+
+                  <label class="uk-form-label" for="form-stacked-text">Category</label>
+                    <select class="uk-select" id="form-stacked-select" name="category" class="ui fluid dropdown" value="{{poi.category.name}}">
+                        <option value="{{poi.category.name}}"></option>
+                        {{#each categories}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+
+
+                  <label class="uk-form-label" for="form-stacked-text">Description</label>
+                    <input class="uk-input" type="text" name="description" value="{{poi.description}}"/>
+
+                  <label class="uk-form-label" for="form-stacked-text">Location Coordinates</label>
+
+                          <label class="uk-form-label uk-width-1-2@s" for="form-stacked-text">Longitude</label>
+                            <input class="uk-input uk-width-1-2@s" id="form-stacked-text" type="number" name="longitude" step="any" value="{{poi.longitude}}" required>
+
+                          <label class="uk-form-label uk-width-1-2@s" for="form-stacked-text">Latitude</label>
+                            <input class="uk-input uk-width-1-2@s" id="form-stacked-text" type="number" name="latitude" step="any" value="{{poi.latitude}}" required>
+
+                <div class="uk-margin">
+                    <div class="right floated column">
+                        <button class="uk-button uk-button-default" value="Submit">UPDATE</button>
+                    </div>
+                </div>
+            </form>
+
+    {{> error }}
+</div>

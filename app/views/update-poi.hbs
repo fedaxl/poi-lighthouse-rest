@@ -1,0 +1,33 @@
+<!-- Update point of interest page - with form form to update details
+ a list of images that can be deleted and a form for a user to add new images-->
+<div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
+{{> title-card title="Great Lighthouses of Ireland" subTitle="POI"}}
+{{> main-menu }}
+</div>
+
+<div class="uk-container">
+  <div class="uk-margin"></div>
+{{> update-poi-form}}
+  <div class="uk-margin"></div>
+  <a href="/delete-poi/{{poi._id}}" class="uk-icon-link" uk-icon="trash">Delete POI</a>
+  <div class="uk-margin"></div>
+<div class="horizontal rule"></div>
+    <section class="ui 15 column middle aligned grid raised segment">
+    <!-- If there are no images don't show the delete images section -->
+    {{#if poi.image}}
+        <div class="row">
+            <div class="column ten wide"><h2>Gallery - Images</h2></div>
+        </div>
+        <div class="row">
+            {{#each poi.image}}
+                {{> image-card}}
+            {{/each}}
+        </div>
+     {{/if}}
+    </section>
+
+{{> add_images}}
+
+<div class="uk-margin"></div>
+      <a href="/delete-poi/{{poi._id}}" class="uk-icon-link" uk-icon="trash">Delete POI</a>
+</div>

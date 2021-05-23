@@ -1,0 +1,117 @@
+{
+  "image": {
+    "_model": "Image",
+    "poolbeg1": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620943994/poolbeg1.jpg",
+      "public_id": "poolbeg1"
+    },
+    "poolbeg2": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620943995/poolbeg2.jpg",
+      "public_id": "poolbeg2"
+    },
+    "poolbeg3": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620943994/poolbeg3.jpg",
+      "public_id": "poolbeg3"
+    },
+    "hook1": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook1.jpg",
+      "public_id": "hook1"
+    },
+    "hook2": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook2.jpg",
+      "public_id": "hook2"
+    },
+    "hook3": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook3.jpg",
+      "public_id": "hook3"
+    },
+    "clare1": {
+      "url": "https://res.cloudinary.com/dckbf7bw7/image/upload/v1620944328/hook2.jpg",
+      "public_id": "clare1"
+    }
+  },
+    "Location": {
+      "_model": "Location",
+      "poolbeg": {
+        "lat": 53.339754,
+        "lng": -6.189457
+      },
+      "hook": {
+        "lat": 52.120946,
+        "lng": -6.924122
+      },
+      "clare": {
+        "lat": 53.802163,
+        "lng": -9.986162
+      }
+    },
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "$2b$10$iT2mfyrZhAH1n.496nGP3uwUbDod4m.4kDpulzg8KGMfDgc5TfczG",
+      "numOfPoi": 1,
+      "scope": "user"
+    },
+    "marge": {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "$2b$10$iT2mfyrZhAH1n.496nGP3uwUbDod4m.4kDpulzg8KGMfDgc5TfczG",
+      "numOfPoi": 1,
+      "scope": "admin"
+    },
+    "bart": {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "$2b$10$iT2mfyrZhAH1n.496nGP3uwUbDod4m.4kDpulzg8KGMfDgc5TfczG",
+      "numOfPoi": 1,
+      "scope": "user"
+    }
+  },
+  "category": {
+    "_model": "Category",
+    "north": {
+      "name": "North Coast"
+    },
+    "east": {
+      "name": "East Coast"
+    },
+    "west": {
+      "name": "West Coast"
+    },
+    "south": {
+      "name": "South Coast"
+    }
+  },
+  "poi": {
+    "_model": "Poi",
+    "poolbeg": {
+      "name": "Poolbeg light",
+      "description": "lighthouse in dublin",
+      "location": "->Location.poolbeg",
+      "user": "->users.marge",
+      "category": "->category.east",
+      "image": ["->image.poolbeg1", "->image.poolbeg2", "->image.poolbeg3"]
+    },
+    "hook": {
+      "name": "Hook Lighthouse",
+      "description": "Hook Lighthouse marks to entrance to Waterford harbour where the Barrow, Nore and Suir rivers meet. The lighthouse operates with Tuskar Rock and Mine Head lights to provide coverage on the South East Coast.",
+      "location": "->Location.hook",
+      "user": "->users.homer",
+      "category": "->category.south",
+      "image": ["->image.hook1", "->image.hook2", "->image.hook3"]
+    },
+    "clare": {
+      "name": "clare",
+      "description": "lighthouse in dublin",
+      "location": "->Location.clare",
+      "user": "->users.bart",
+      "category": "->category.east",
+      "image": ["->image.clare1"]
+    }
+  }
+}

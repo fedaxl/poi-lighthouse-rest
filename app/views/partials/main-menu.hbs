@@ -1,0 +1,24 @@
+<ul class="uk-iconnav uk-margin-left">
+  <a href="/" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="fas fa-map-marked-alt fa-3x" style="color:rgb(0,140,180)" title="Map" pos="bottom" uk-tooltip></i>
+  </a>
+  <a href="/home" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="fas fa-map-marker-alt fa-3x" style="color:rgb(153, 196, 74)" title="POI" pos="bottom" uk-tooltip></i>
+  </a>
+  <a href="/social" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="far fa-comment fa-3x" style="color:rgb(210, 206, 74)" title="Social" pos="bottom" uk-tooltip></i>
+  </a>{{#if isadmin}}
+  <a href="/admin-dashboard" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="fas fa-th-list fa-3x" style="color:rgb(63, 122, 139)" title="Dashboard" pos="bottom" uk-tooltip></i>
+  </a>
+{{/if}}
+  <a href="/settings" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="fas fa-sliders-h fa-3x" style="color:rgb(14, 168, 160)" title="Settings" pos="bottom" uk-tooltip></i>
+  </a>
+  <a href="/logout" class="uk-card uk-card-small uk-card-hover uk-padding-small">
+    <i class="fas fa-sign-out-alt fa-3x" style="color:rgb(156, 70, 128)" title="Logout" pos="bottom" uk-tooltip></i>
+  </a>
+</ul>
+<script>
+  $("#{{_id}}").addClass("active item");
+</script>

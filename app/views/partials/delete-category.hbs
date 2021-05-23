@@ -1,0 +1,14 @@
+<!--Partial with  form to delete a category -->
+<div class="uk-section">
+  <div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body">
+    <h2>Delete a Category</h2>
+    <form class="uk-form-stacked" action="/delete-category" method="POST">
+
+      {{> filter-category}}
+
+      <button class="uk-button uk-button-default" value="Submit">Delete Category & Its associated POI's</button>
+    </form>
+  </div>
+</div>
+{{> error }}
+

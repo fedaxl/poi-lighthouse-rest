@@ -1,0 +1,25 @@
+<!--Partial for viewing a list of users -->
+<section class="ui raised segment">
+<div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+  <table class="uk-table">
+    <caption>
+      List of users
+    </caption>
+    <thead>
+    <th>Full Name</th>
+    <th>POI</th>
+    <th>Delete</th>
+    </thead>
+    <tbody class="uk-text-left">
+    {{#each users}}
+      <tr>
+        <td><a href="/view-user/{{_id}}">{{firstName}} {{lastName}}</a></td>
+        <td>{{numOfPoi}}</td>
+        <td> <a href="/delete-user/{{_id}}" class="ui icon button"><i class="uk-icon-link" uk-icon="trash"></i>
+        </a></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
+</section>

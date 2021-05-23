@@ -1,0 +1,11 @@
+<!--partial for the internal section of the filter by category form-->
+<div class="uk-form-controls">
+  <label>Select a Category</label>
+  <select name="category" class="uk-select" id="form-stacked-select">
+    <option value="{{defaultcategory.name}}"></option>
+    <option value="all">ALL CATEGORIES</option>
+    {{#each categories}}
+      <option value="{{name}}">{{name}}</option>
+    {{/each}}
+  </select>
+</div>

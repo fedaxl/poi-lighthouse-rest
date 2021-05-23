@@ -1,0 +1,15 @@
+<!-- Partial with a form to add images -->
+<div class="uk-card uk-card-primary uk-card-body">
+  <h3 class="uk-card-title">Upload a new Image to the Gallery</h3>
+  <form class="uk-form" action="/addimage/{{poi._id}}" method="POST" enctype="multipart/form-data">
+    <div class="uk-margin">
+      <div class="uk-form-controls">
+        <input type="file" class="uk-input" name="image" accept="image/png, image/jpeg">
+      </div>
+    </div>
+    <p uk-margin>
+      <input type="submit" value="Upload" class="uk-button uk-button-default">
+    </p>
+  </form>
+</div>
+{{> error }}

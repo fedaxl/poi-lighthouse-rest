@@ -1,0 +1,33 @@
+
+<!-- Categories page shows a form to add a category, delete a category, filter by category and a list of
+all users points of interest. This is only accessible by the Admin-->
+<div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
+{{> title-card title="Great Lighthouses of Ireland" subTitle="POI"}}
+{{> main-menu _id="categories"}}
+</div>
+
+<div class="uk-section uk-section-secondary uk-light">
+  <div class="uk-container">
+    <h2>Categories</h2>
+  </div>
+</div>
+
+<form class="uk-form-stacked" action="/filter-category" method="POST">
+  {{> filter-category}}
+  <div class="uk-margin">
+    <button class="uk-button uk-button-default" value="Submit">Filter By Category</button>
+  </div>
+</form>
+
+<div class="uk-margin">
+    {{> poi-table}}
+  </div>
+  <div class="ui grid">
+    <div class="eight wide column">
+      {{> add-category}}
+    </div>
+    <div class="eight wide column">
+      {{> delete-category}}
+    </div>
+  </div>
+</section>

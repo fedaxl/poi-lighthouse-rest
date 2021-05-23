@@ -1,0 +1,19 @@
+<!-- Page for admin to view a users points of interest and a filter for
+admin to be able to view a users poi by category -->
+<div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
+{{> title-card title="Great Lighthouses of Ireland" subTitle="POI"}}
+{{> main-menu _id="users"}}
+</div>
+
+<div class="uk-container uk-margin">
+  <div class="uk-child-width-expand uk-flex-center uk-flex-middle uk-text-center" uk-grid>
+    <div class="uk-width-auto@m">
+      <!--  <img width="450" src="images/map.png" /> -->
+      <h3>{{firstName}} {{lastName}}'s Points Of Interest</h3>
+    </div>
+  </div>
+  <div class="uk-width-expand@m">{{> filter-category-viewuser }}</div>
+  <div class="uk-width-expand@m">{{> poi-table }}</div>
+
+</div>
+</div>
