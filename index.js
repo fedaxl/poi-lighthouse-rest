@@ -77,7 +77,7 @@ async function init() {
   //JWT authentication
   server.auth.strategy('jwt', 'jwt',
     {
-      key: process.env.JWT_PASSWORD,
+      key: process.env.jwt_password,
       validate: utils.validate,
       verifyOptions: { algorithms: ['HS256'] }
     });
