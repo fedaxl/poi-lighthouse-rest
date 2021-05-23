@@ -9,7 +9,7 @@ const utils = require('./app/api/utils');
 
 const server = Hapi.server({
   port: process.env.PORT || 4000,
-  routes : { "cors": true }
+  routes: { cors: true },
 });
 
 

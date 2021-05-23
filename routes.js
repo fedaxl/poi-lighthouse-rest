@@ -5,6 +5,7 @@ const Accounts = require('./app/controllers/accounts');
 const Category = require('./app/controllers/categories-ctrl');
 const Admin = require('./app/controllers/admin');
 const Image = require('./app/controllers/gallery');
+const Reviews = require("./app/controllers/reviews");
 
 module.exports = [
   // Routes for user authentication
@@ -44,6 +45,11 @@ module.exports = [
   {method: 'POST', path: '/add-category', config: Category.addCategory},
   {method: 'POST', path: '/delete-category',config: Category.deleteCategory},
   {method: 'POST', path: '/home', config: Poi.home},
+
+  //Reviews - Social
+  { method: 'GET', path: '/reviews', config: Reviews.index },
+  { method: 'POST', path: '/reviews/{id}', config: Reviews.addReview },
+  { method: 'GET', path: '/reviews/{id}', config: Reviews.showReviews },
 
   {
     method: 'GET',

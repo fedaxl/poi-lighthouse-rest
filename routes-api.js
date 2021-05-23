@@ -3,6 +3,7 @@ const Pois = require('./app/api/pois');
 const Users = require('./app/api/user');
 const Images = require('./app/api/images');
 const Locations = require('./app/api/location');
+const Reviews = require('./app/api/reviews');
 
 module.exports=[
 
@@ -41,5 +42,11 @@ module.exports=[
   { method: 'POST', path: '/api/images', config: Images.create },
   { method: 'DELETE', path: '/api/poi/{poi_id}/images/{img_id}', config: Images.deleteOne },
   { method: 'DELETE', path: '/api/images', config: Images.deleteAll },
+
+  { method: "GET", path: "/api/reviews", config: Reviews.find },
+  { method: "GET", path: "/api/reviews/{id}", config: Reviews.findOne },
+  { method: "POST", path: "/api/reviews", config: Reviews.create },
+  { method: "DELETE", path: "/api/reviews/{id}", config: Reviews.deleteOne },
+  { method: "DELETE", path: "/api/reviews", config: Reviews.deleteAll },
 
 ];
